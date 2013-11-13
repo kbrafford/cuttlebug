@@ -518,7 +518,7 @@ class RuntimeTree(gizmos.TreeListCtrl, ArtListMixin, KeyTree):
                 self.model.break_delete(bkpt)
             
     def update_registers(self, names):
-        '''
+        #'''
         if self.model and self.registers_item.is_ok():
             registers = self.model.registers
             if len(registers) != self.get_children_count(self.registers_item, recursive=False):
@@ -537,7 +537,7 @@ class RuntimeTree(gizmos.TreeListCtrl, ArtListMixin, KeyTree):
                     print item
                     self.set_item_text(item, registers[name], 1)
                     self.set_item_text_colour(item, wx.RED)
-        '''
+        #'''
         
     def build_sfr_tree(self):
         if not self.parent.controller.project:
